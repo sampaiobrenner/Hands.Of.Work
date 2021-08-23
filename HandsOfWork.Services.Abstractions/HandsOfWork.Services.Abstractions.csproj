@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HandsOfWork.Entities.Abstractions\HandsOfWork.Entities.Abstractions.csproj" />
+    <ProjectReference Include="..\HandsOfWork.Repositories.Abstractions\HandsOfWork.Repositories.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using HandsOfWork.Entities.Abstractions;
+using HandsOfWork.Repositories.Abstractions;
 using System.Collections.Generic;
 
 namespace HandsOfWork.Services.Abstractions
@@ -7,9 +8,9 @@ namespace HandsOfWork.Services.Abstractions
         where TEntityKey : struct
         where TEntity : BaseEntity<TEntityKey>
     {
-        private readonly ICrudRepository<TEntity> _crudRepository;
+        private readonly ICrudRepository<TEntity, TEntityKey> _crudRepository;
 
-        protected CrudService(ICrudRepository<TEntity> crudRepository)
+        protected CrudService(ICrudRepository<TEntity, TEntityKey> crudRepository)
         {
             _crudRepository = crudRepository;
         }
