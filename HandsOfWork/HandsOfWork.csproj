@@ -106,9 +106,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HandsOfWork.Entities.Abstractions\HandsOfWork.Entities.Abstractions.csproj">
+      <Project>{1B4CE5CE-6BF6-48D2-A22A-7A541E71689D}</Project>
+      <Name>HandsOfWork.Entities.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandsOfWork.Entities\HandsOfWork.Entities.csproj">
+      <Project>{73437C50-5F0D-4E75-863C-300A4D1F96D0}</Project>
+      <Name>HandsOfWork.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HandsOfWork.Repositories\HandsOfWork.Repositories.csproj">
       <Project>{72757d7c-bb76-4788-ae0e-592d1873506e}</Project>
       <Name>HandsOfWork.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandsOfWork.Services.Abstractions\HandsOfWork.Services.Abstractions.csproj">
+      <Project>{EB50AE1C-E0E4-423E-8D0C-121BE8580868}</Project>
+      <Name>HandsOfWork.Services.Abstractions</Name>
     </ProjectReference>
     <ProjectReference Include="..\HandsOfWork.Services\HandsOfWork.Services.csproj">
       <Project>{2f7568a7-df05-4a04-9f82-270b18640043}</Project>
