@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HandsOfWork.Entities\HandsOfWork.Entities.csproj" />
+    <ProjectReference Include="..\HandsOfWork.Repositories.Abstractions\HandsOfWork.Repositories.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>

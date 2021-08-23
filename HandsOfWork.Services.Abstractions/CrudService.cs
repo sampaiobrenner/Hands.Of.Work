@@ -15,14 +15,19 @@ namespace HandsOfWork.Services.Abstractions
             _crudRepository = crudRepository;
         }
 
-        public void Cadastrar(TEntity entity) => _crudRepository.Cadastrar(entity);
+        public void Cadastrar(TEntity entity)
+            => _crudRepository.Cadastrar(entity);
 
-        public void Editar(TEntity entity) => _crudRepository.Editar(entity);
+        public void Editar(TEntity entity)
+            => _crudRepository.Editar(entity);
 
-        public void Excluir(TEntityKey id) => _crudRepository.Excluir(id);
+        public void Excluir(TEntityKey id)
+            => _crudRepository.Excluir(id);
 
-        public List<TEntity> Listar() => _crudRepository.Listar();
+        public IEnumerable<TEntity> Listar()
+            => _crudRepository.Listar();
 
-        public TEntity ObterPorId(TEntityKey id) => _crudRepository.ObterPorId(id);
+        public TEntity ObterPorId(TEntityKey id)
+            => _crudRepository.ObterPorId(id);
     }
 }

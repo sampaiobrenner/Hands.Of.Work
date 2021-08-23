@@ -13,7 +13,7 @@ namespace HandsOfWork.Services.Abstractions
 
         void Excluir(TEntityKey id);
 
-        List<TEntity> Listar();
+        IEnumerable<TEntity> Listar();
 
         TEntity ObterPorId(TEntityKey id);
     }
