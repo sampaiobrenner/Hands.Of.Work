@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HandsOfWork.Forms.CategoriaDeProdutos;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HandsOfWork.Extensions
 {
@@ -7,6 +8,7 @@ namespace HandsOfWork.Extensions
         public static IServiceCollection AddForms(this IServiceCollection services)
         {
             services.AddScoped<Form1>();
+            services.AddScoped<FormCadastroCategoriaDeProduto>();
             return services;
         }
     }
