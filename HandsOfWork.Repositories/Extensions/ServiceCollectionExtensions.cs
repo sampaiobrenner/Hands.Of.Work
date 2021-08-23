@@ -2,6 +2,7 @@
 using HandsOfWork.Repositories.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using HandsOfWork.Repositories.CategoriaDoProdutos;
 
 namespace HandsOfWork.Repositories.Extensions
 {

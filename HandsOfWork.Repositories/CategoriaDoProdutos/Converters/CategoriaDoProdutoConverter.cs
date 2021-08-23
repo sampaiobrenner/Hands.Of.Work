@@ -10,6 +10,9 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos.Converters
         {
             if (source is null) return default;
 
+            if (destination is null)
+                destination = new CategoriaDoProdutoModel();
+
             destination.Id = source.Id;
             destination.Descricao = source.Descricao;
 

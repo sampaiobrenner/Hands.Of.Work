@@ -5,7 +5,7 @@ using HandsOfWork.Repositories.CategoriaDoProdutos.Models;
 using System;
 using System.Collections.Generic;
 
-namespace HandsOfWork.Repositories
+namespace HandsOfWork.Repositories.CategoriaDoProdutos
 {
     public class CategoriaDoProdutoRepository : CrudRepository<CategoriaDoProduto, Guid>
     {

@@ -24,6 +24,8 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         {
             var categoriaDoProduto = new CategoriaDoProduto { Descricao = lblDescricao.Text };
             _categoriaDoProdutoService.Cadastrar(categoriaDoProduto);
+
+            MessageBox.Show("Categoria cadastrada com sucesso!");
         }
     }
 }
