@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HandsOfWork.Extensions;
+using HandsOfWork.Repositories.Extensions;
+using HandsOfWork.Services.Extensions;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows.Forms;
 
@@ -9,8 +12,10 @@ namespace HandsOfWork
         [STAThread]
         private static void Main()
         {
-            var services = new ServiceCollection();
-            services.AddScoped<Form1>();
+            var services = new ServiceCollection()
+                .AddForms()
+                .AddRepositories()
+                .AddServices();
 
             var serviceProvider = services.BuildServiceProvider();
 

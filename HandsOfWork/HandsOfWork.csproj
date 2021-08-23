@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HandsOfWork.Repositories\HandsOfWork.Repositories.csproj">
+      <Project>{72757d7c-bb76-4788-ae0e-592d1873506e}</Project>
+      <Name>HandsOfWork.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandsOfWork.Services\HandsOfWork.Services.csproj">
+      <Project>{2f7568a7-df05-4a04-9f82-270b18640043}</Project>
+      <Name>HandsOfWork.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
