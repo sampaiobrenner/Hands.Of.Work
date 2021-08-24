@@ -7,9 +7,9 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
 {
     public partial class FormCadastroCategoriaDeProduto : Form
     {
-        private readonly ICrudService<CategoriaDoProduto, Guid> _categoriaDoProdutoService;
+        private readonly ICrudService<CategoriaDoProduto, int> _categoriaDoProdutoService;
 
-        public FormCadastroCategoriaDeProduto(ICrudService<CategoriaDoProduto, Guid> categoriaDoProdutoService)
+        public FormCadastroCategoriaDeProduto(ICrudService<CategoriaDoProduto, int> categoriaDoProdutoService)
         {
             InitializeComponent();
             _categoriaDoProdutoService = categoriaDoProdutoService;

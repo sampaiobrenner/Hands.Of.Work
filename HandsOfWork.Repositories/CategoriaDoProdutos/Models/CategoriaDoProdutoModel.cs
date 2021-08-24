@@ -1,9 +1,8 @@
 ﻿using HandsOfWork.Entities.Abstractions;
-using System;
 
 namespace HandsOfWork.Repositories.CategoriaDoProdutos.Models
 {
-    public class CategoriaDoProdutoModel : BaseEntity<Guid>
+    public class CategoriaDoProdutoModel : BaseEntity<int>
     {
         public string Descricao { get; set; }
     }

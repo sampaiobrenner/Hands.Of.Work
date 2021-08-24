@@ -1,7 +1,6 @@
 ﻿using HandsOfWork.Entities;
 using HandsOfWork.Services.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace HandsOfWork.Services.Extensions
 {
@@ -9,7 +8,7 @@ namespace HandsOfWork.Services.Extensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            services.AddScoped<ICrudService<CategoriaDoProduto, Guid>, CategoriaDoProdutoService>();
+            services.AddScoped<ICrudService<CategoriaDoProduto, int>, CategoriaDoProdutoService>();
             return services;
         }
     }

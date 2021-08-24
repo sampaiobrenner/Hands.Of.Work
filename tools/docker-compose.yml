@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+
+  sql-server:
+    container_name: sql-server
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - 'ACCEPT_EULA=Y'
+      - 'SA_PASSWORD=HandsOfWork1!@'
+    healthcheck:
+        test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-Usa", "-PHandsOfWork1!@", "-Q", "select 1"]
+        interval: 10s
+        timeout: 3s
+        retries: 10
+        start_period: 10s
+    ports: 
+      - '1433:1433'
+    volumes:
+      - ./volumes/sql-server:/var/opt/mssql/data
+    restart: unless-stopped
+    networks: 
+      - hands-of-work
+
+networks:
+  hands-of-work:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.10.0/24  
