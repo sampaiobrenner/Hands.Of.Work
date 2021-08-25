@@ -28,6 +28,9 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         {
             if (dgvListagemCategoriaProduto.CurrentRow is null) return;
 
+            var dialogResult = MessageBox.Show("Você realmente deseja excluir a categoria selecionada?", "Confirmação de exclusão", MessageBoxButtons.YesNo);
+            if (dialogResult != DialogResult.Yes) return;
+
             var id = int.Parse(dgvListagemCategoriaProduto.CurrentRow.Cells["Id"].Value.ToString());
             await _categoriaDoProdutoService.ExcluirAsync(id);
             MessageBox.Show("Categoria excluida com sucesso!");

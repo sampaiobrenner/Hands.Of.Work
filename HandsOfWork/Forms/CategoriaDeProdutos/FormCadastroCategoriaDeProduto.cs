@@ -20,7 +20,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private async void btnSalvar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txbDescricao.Text))
             {
@@ -30,7 +30,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             }
 
             var categoriaDoProduto = new CategoriaDoProduto { Descricao = txbDescricao.Text };
-            _categoriaDoProdutoService.CadastrarAsync(categoriaDoProduto);
+            await _categoriaDoProdutoService.CadastrarAsync(categoriaDoProduto);
 
             MessageBox.Show("Categoria cadastrada com sucesso!");
             Close();
