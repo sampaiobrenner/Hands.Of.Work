@@ -1,6 +1,7 @@
 ﻿using HandsOfWork.Entities;
 using HandsOfWork.Services.Abstractions;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HandsOfWork.Forms.CategoriaDeProdutos
@@ -20,7 +21,18 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         private async void btnCadastrar_Click(object sender, EventArgs e)
         {
             _formCadastroCategoriaDeProduto.ShowDialog();
-            dgvListagemCategoriaProduto.DataSource = await _categoriaDoProdutoService.ListarAsync();
+            await ListarCategorias();
+        }
+
+        private async void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (dgvListagemCategoriaProduto.CurrentRow is null) return;
+
+            var id = int.Parse(dgvListagemCategoriaProduto.CurrentRow.Cells["Id"].Value.ToString());
+            await _categoriaDoProdutoService.ExcluirAsync(id);
+            MessageBox.Show("Categoria excluida com sucesso!");
+
+            await ListarCategorias();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +41,11 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         }
 
         private async void FormListagemDeCategoriaDeProduto_Load(object sender, EventArgs e)
+        {
+            await ListarCategorias();
+        }
+
+        private async Task ListarCategorias()
         {
             dgvListagemCategoriaProduto.DataSource = await _categoriaDoProdutoService.ListarAsync();
         }

@@ -31,13 +31,13 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvListagemCategoriaProduto = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemCategoriaProduto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -63,10 +63,30 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.Id,
             this.Descricao});
             this.dgvListagemCategoriaProduto.Location = new System.Drawing.Point(18, 28);
+            this.dgvListagemCategoriaProduto.MultiSelect = false;
             this.dgvListagemCategoriaProduto.Name = "dgvListagemCategoriaProduto";
             this.dgvListagemCategoriaProduto.ReadOnly = true;
+            this.dgvListagemCategoriaProduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvListagemCategoriaProduto.ShowEditingIcon = false;
             this.dgvListagemCategoriaProduto.Size = new System.Drawing.Size(704, 280);
             this.dgvListagemCategoriaProduto.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Descricao
+            // 
+            this.Descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descricao.DataPropertyName = "Descricao";
+            this.Descricao.HeaderText = "Descricao";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // panel2
             // 
@@ -88,6 +108,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -117,23 +138,6 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.button1.Text = "Fechar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Descricao
-            // 
-            this.Descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descricao.DataPropertyName = "Descricao";
-            this.Descricao.HeaderText = "Descricao";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormListagemDeCategoriaDeProduto
             // 

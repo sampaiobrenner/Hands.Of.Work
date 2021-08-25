@@ -36,7 +36,8 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos
 
         public override async Task ExcluirAsync(int id)
         {
-            _context.CategoriaDoProduto.Remove(new CategoriaDoProdutoModel { Id = id });
+            var model = await _context.CategoriaDoProduto.FirstOrDefaultAsync(x => x.Id == id);
+            _context.CategoriaDoProduto.Remove(model);
             await _context.SaveChangesAsync();
         }
 
