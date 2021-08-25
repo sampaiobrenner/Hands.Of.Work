@@ -28,7 +28,7 @@ namespace HandsOfWork
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var form1 = serviceProvider.GetRequiredService<Form1>();
+            var form1 = serviceProvider.GetRequiredService<FormMenu>();
             Application.Run(form1);
         }
     }

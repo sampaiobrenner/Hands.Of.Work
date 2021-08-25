@@ -7,7 +7,8 @@ namespace HandsOfWork.Extensions
     {
         public static IServiceCollection AddForms(this IServiceCollection services)
         {
-            services.AddScoped<Form1>();
+            services.AddScoped<FormMenu>();
+            services.AddScoped<FormListagemDeCategoriaDeProduto>();
             services.AddScoped<FormCadastroCategoriaDeProduto>();
             return services;
         }

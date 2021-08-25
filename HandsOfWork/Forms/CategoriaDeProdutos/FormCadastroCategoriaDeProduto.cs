@@ -22,7 +22,14 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            var categoriaDoProduto = new CategoriaDoProduto { Descricao = lblDescricao.Text };
+            if (string.IsNullOrEmpty(txbDescricao.Text))
+            {
+                MessageBox.Show("O campo descrição deve ser informado.");
+                txbDescricao.Focus();
+                return;
+            }
+
+            var categoriaDoProduto = new CategoriaDoProduto { Descricao = txbDescricao.Text };
             _categoriaDoProdutoService.Cadastrar(categoriaDoProduto);
 
             MessageBox.Show("Categoria cadastrada com sucesso!");
