@@ -10,7 +10,10 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos.Profiles
         public CategoriaDoProdutoProfile()
         {
             CreateMap<CategoriaDoProduto, CategoriaDoProdutoModel>()
-                .ConvertUsing<CategoriaDoProdutoConverter>();
+                .ConvertUsing<CategoriaDoProdutoToCategoriaDoProdutoModelConverter>();
+
+            CreateMap<CategoriaDoProdutoModel, CategoriaDoProduto>()
+                .ConvertUsing<CategoriaDoProdutoModelToCategoriaDoProdutoConverter>();
         }
     }
 }

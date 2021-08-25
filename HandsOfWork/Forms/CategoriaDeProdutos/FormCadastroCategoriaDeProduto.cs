@@ -30,9 +30,10 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             }
 
             var categoriaDoProduto = new CategoriaDoProduto { Descricao = txbDescricao.Text };
-            _categoriaDoProdutoService.Cadastrar(categoriaDoProduto);
+            _categoriaDoProdutoService.CadastrarAsync(categoriaDoProduto);
 
             MessageBox.Show("Categoria cadastrada com sucesso!");
+            Close();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using HandsOfWork.Entities.Abstractions;
 using HandsOfWork.Repositories.Abstractions;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HandsOfWork.Services.Abstractions
 {
@@ -15,19 +16,19 @@ namespace HandsOfWork.Services.Abstractions
             _crudRepository = crudRepository;
         }
 
-        public void Cadastrar(TEntity entity)
-            => _crudRepository.Cadastrar(entity);
+        public async Task CadastrarAsync(TEntity entity)
+            => await _crudRepository.CadastrarAsync(entity);
 
-        public void Editar(TEntity entity)
-            => _crudRepository.Editar(entity);
+        public async Task EditarAsync(TEntity entity)
+            => await _crudRepository.EditarAsync(entity);
 
-        public void Excluir(TEntityKey id)
-            => _crudRepository.Excluir(id);
+        public async Task ExcluirAsync(TEntityKey id)
+            => await _crudRepository.ExcluirAsync(id);
 
-        public IEnumerable<TEntity> Listar()
-            => _crudRepository.Listar();
+        public async Task<IEnumerable<TEntity>> ListarAsync()
+            => await _crudRepository.ListarAsync();
 
-        public TEntity ObterPorId(TEntityKey id)
-            => _crudRepository.ObterPorId(id);
+        public async Task<TEntity> ObterPorIdAsync(TEntityKey id)
+            => await _crudRepository.ObterPorIdAsync(id);
     }
 }

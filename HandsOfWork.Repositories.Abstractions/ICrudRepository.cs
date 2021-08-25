@@ -1,20 +1,21 @@
 ﻿using HandsOfWork.Entities.Abstractions;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HandsOfWork.Repositories.Abstractions
 {
-    public interface ICrudRepository<TEntity, TEntityKey>
+    public interface ICrudRepository<TEntity, in TEntityKey>
         where TEntityKey : struct
         where TEntity : BaseEntity<TEntityKey>
     {
-        void Cadastrar(TEntity entity);
+        Task CadastrarAsync(TEntity entity);
 
-        void Editar(TEntity entity);
+        Task EditarAsync(TEntity entity);
 
-        void Excluir(TEntityKey id);
+        Task ExcluirAsync(TEntityKey id);
 
-        IEnumerable<TEntity> Listar();
+        Task<IEnumerable<TEntity>> ListarAsync();
 
-        TEntity ObterPorId(TEntityKey id);
+        Task<TEntity> ObterPorIdAsync(TEntityKey id);
     }
 }

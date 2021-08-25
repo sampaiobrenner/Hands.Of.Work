@@ -1,5 +1,6 @@
 ﻿using HandsOfWork.Entities.Abstractions;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HandsOfWork.Repositories.Abstractions
 {
@@ -7,14 +8,14 @@ namespace HandsOfWork.Repositories.Abstractions
         where TEntityKey : struct
         where TEntity : BaseEntity<TEntityKey>
     {
-        public abstract void Cadastrar(TEntity entity);
+        public abstract Task CadastrarAsync(TEntity entity);
 
-        public abstract void Editar(TEntity entity);
+        public abstract Task EditarAsync(TEntity entity);
 
-        public abstract void Excluir(TEntityKey id);
+        public abstract Task ExcluirAsync(TEntityKey id);
 
-        public abstract IEnumerable<TEntity> Listar();
+        public abstract Task<IEnumerable<TEntity>> ListarAsync();
 
-        public abstract TEntity ObterPorId(TEntityKey id);
+        public abstract Task<TEntity> ObterPorIdAsync(TEntityKey id);
     }
 }

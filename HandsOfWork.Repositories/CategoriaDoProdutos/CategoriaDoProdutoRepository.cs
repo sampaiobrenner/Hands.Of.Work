@@ -3,8 +3,9 @@ using HandsOfWork.Entities;
 using HandsOfWork.Repositories.Abstractions;
 using HandsOfWork.Repositories.CategoriaDoProdutos.Models;
 using HandsOfWork.Repositories.Contexts;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HandsOfWork.Repositories.CategoriaDoProdutos
 {
@@ -19,29 +20,38 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos
             _mapper = mapper;
         }
 
-        public override void Cadastrar(CategoriaDoProduto entity)
+        public override async Task CadastrarAsync(CategoriaDoProduto entity)
         {
             var model = _mapper.Map<CategoriaDoProduto, CategoriaDoProdutoModel>(entity);
-            _context.CategoriaDoProduto.Add(model);
-            _context.SaveChanges();
+            await _context.CategoriaDoProduto.AddAsync(model);
+            await _context.SaveChangesAsync();
         }
 
-        public override void Editar(CategoriaDoProduto entity)
+        public override async Task EditarAsync(CategoriaDoProduto entity)
         {
+            var model = _mapper.Map<CategoriaDoProduto, CategoriaDoProdutoModel>(entity);
+            _context.CategoriaDoProduto.Update(model);
+            await _context.SaveChangesAsync();
         }
 
-        public override void Excluir(int id)
+        public override async Task ExcluirAsync(int id)
         {
+            _context.CategoriaDoProduto.Remove(new CategoriaDoProdutoModel { Id = id });
+            await _context.SaveChangesAsync();
         }
 
-        public override IEnumerable<CategoriaDoProduto> Listar()
+        public override async Task<IEnumerable<CategoriaDoProduto>> ListarAsync()
         {
-            throw new NotImplementedException();
+            var models = await _context.CategoriaDoProduto.ToListAsync();
+            var categorias = _mapper.Map<IEnumerable<CategoriaDoProdutoModel>, IEnumerable<CategoriaDoProduto>>(models);
+            return categorias;
         }
 
-        public override CategoriaDoProduto ObterPorId(int id)
+        public override async Task<CategoriaDoProduto> ObterPorIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var model = await _context.CategoriaDoProduto.FirstOrDefaultAsync(x => x.Id == id);
+            var categoria = _mapper.Map<CategoriaDoProdutoModel, CategoriaDoProduto>(model);
+            return categoria;
         }
     }
 }
