@@ -184,6 +184,12 @@
     <Compile Include="Forms\CategoriaDeProdutos\FormListagemDeCategoriaDeProduto.Designer.cs">
       <DependentUpon>FormListagemDeCategoriaDeProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Clientes\FormCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormCadastroCliente.Designer.cs">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Clientes\FormListagemDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CategoriaDeProdutos\FormListagemDeCategoriaDeProduto.resx">
       <DependentUpon>FormListagemDeCategoriaDeProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FormCadastroCliente.resx">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\FormListagemDeClientes.resx">
       <DependentUpon>FormListagemDeClientes.cs</DependentUpon>

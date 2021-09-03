@@ -10,6 +10,7 @@ namespace HandsOfWork.Extensions
         {
             services.AddScoped<FormMenu>();
             services.AddScoped<FormListagemDeClientes>();
+            services.AddScoped<FormCadastroCliente>();
             services.AddScoped<FormListagemDeCategoriaDeProduto>();
             services.AddScoped<FormCadastroCategoriaDeProduto>();
             return services;
