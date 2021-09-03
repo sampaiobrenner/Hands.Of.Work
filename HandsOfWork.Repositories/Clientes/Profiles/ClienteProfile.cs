@@ -11,6 +11,9 @@ namespace HandsOfWork.Repositories.Clientes.Profiles
         {
             CreateMap<Cliente, ClienteModel>()
                 .ConvertUsing<ClienteToClienteModelConverter>();
+
+            CreateMap<ClienteModel, Cliente>()
+                .ConvertUsing<ClienteModelToClienteConverter>();
         }
     }
 }

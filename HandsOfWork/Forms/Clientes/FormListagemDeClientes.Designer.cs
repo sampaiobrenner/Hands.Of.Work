@@ -30,7 +30,7 @@ namespace HandsOfWork.Forms.Clientes
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvListagemCategoriaProduto = new System.Windows.Forms.DataGridView();
+            this.dgvListagemClientes = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,40 +39,40 @@ namespace HandsOfWork.Forms.Clientes
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListagemCategoriaProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListagemClientes)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgvListagemCategoriaProduto);
+            this.panel1.Controls.Add(this.dgvListagemClientes);
             this.panel1.Location = new System.Drawing.Point(37, 27);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(987, 400);
             this.panel1.TabIndex = 2;
             // 
-            // dgvListagemCategoriaProduto
+            // dgvListagemClientes
             // 
-            this.dgvListagemCategoriaProduto.AllowUserToAddRows = false;
-            this.dgvListagemCategoriaProduto.AllowUserToDeleteRows = false;
-            this.dgvListagemCategoriaProduto.AllowUserToResizeColumns = false;
-            this.dgvListagemCategoriaProduto.AllowUserToResizeRows = false;
-            this.dgvListagemCategoriaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListagemCategoriaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListagemClientes.AllowUserToAddRows = false;
+            this.dgvListagemClientes.AllowUserToDeleteRows = false;
+            this.dgvListagemClientes.AllowUserToResizeColumns = false;
+            this.dgvListagemClientes.AllowUserToResizeRows = false;
+            this.dgvListagemClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListagemClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Nome});
-            this.dgvListagemCategoriaProduto.Location = new System.Drawing.Point(24, 34);
-            this.dgvListagemCategoriaProduto.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvListagemCategoriaProduto.MultiSelect = false;
-            this.dgvListagemCategoriaProduto.Name = "dgvListagemCategoriaProduto";
-            this.dgvListagemCategoriaProduto.ReadOnly = true;
-            this.dgvListagemCategoriaProduto.RowHeadersWidth = 51;
-            this.dgvListagemCategoriaProduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvListagemCategoriaProduto.ShowEditingIcon = false;
-            this.dgvListagemCategoriaProduto.Size = new System.Drawing.Size(939, 345);
-            this.dgvListagemCategoriaProduto.TabIndex = 0;
+            this.dgvListagemClientes.Location = new System.Drawing.Point(24, 34);
+            this.dgvListagemClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvListagemClientes.MultiSelect = false;
+            this.dgvListagemClientes.Name = "dgvListagemClientes";
+            this.dgvListagemClientes.ReadOnly = true;
+            this.dgvListagemClientes.RowHeadersWidth = 51;
+            this.dgvListagemClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvListagemClientes.ShowEditingIcon = false;
+            this.dgvListagemClientes.Size = new System.Drawing.Size(939, 345);
+            this.dgvListagemClientes.TabIndex = 0;
             // 
             // Id
             // 
@@ -116,6 +116,7 @@ namespace HandsOfWork.Forms.Clientes
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -160,8 +161,9 @@ namespace HandsOfWork.Forms.Clientes
             this.Name = "FormListagemDeClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de clientes";
+            this.Load += new System.EventHandler(this.FormListagemDeClientes_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListagemCategoriaProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListagemClientes)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -170,7 +172,7 @@ namespace HandsOfWork.Forms.Clientes
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvListagemCategoriaProduto;
+        private System.Windows.Forms.DataGridView dgvListagemClientes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
