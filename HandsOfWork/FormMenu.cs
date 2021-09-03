@@ -26,5 +26,15 @@ namespace HandsOfWork
         {
             _formListagemDeClientes.ShowDialog();
         }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ainda não implementado!");
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ainda não implementado!");
+        }
     }
 }
