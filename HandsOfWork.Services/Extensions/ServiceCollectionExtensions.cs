@@ -9,6 +9,7 @@ namespace HandsOfWork.Services.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<ICrudService<CategoriaDoProduto, int>, CategoriaDoProdutoService>();
+            services.AddScoped<ICrudService<Cliente, int>, ClienteService>();
             return services;
         }
     }

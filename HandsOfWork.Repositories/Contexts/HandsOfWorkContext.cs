@@ -1,4 +1,5 @@
 ﻿using HandsOfWork.Repositories.CategoriaDoProdutos.Models;
+using HandsOfWork.Repositories.Clientes.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HandsOfWork.Repositories.Contexts
@@ -6,6 +7,7 @@ namespace HandsOfWork.Repositories.Contexts
     public class HandsOfWorkContext : DbContext
     {
         public DbSet<CategoriaDoProdutoModel> CategoriaDoProduto { get; set; }
+        public DbSet<ClienteModel> Cliente { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
