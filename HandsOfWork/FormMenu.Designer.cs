@@ -37,9 +37,10 @@ namespace HandsOfWork
             // 
             // btnCategoriaDeProduto
             // 
-            this.btnCategoriaDeProduto.Location = new System.Drawing.Point(73, 198);
+            this.btnCategoriaDeProduto.Location = new System.Drawing.Point(97, 244);
+            this.btnCategoriaDeProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCategoriaDeProduto.Name = "btnCategoriaDeProduto";
-            this.btnCategoriaDeProduto.Size = new System.Drawing.Size(190, 67);
+            this.btnCategoriaDeProduto.Size = new System.Drawing.Size(253, 82);
             this.btnCategoriaDeProduto.TabIndex = 2;
             this.btnCategoriaDeProduto.Text = "Categoria de produtos";
             this.btnCategoriaDeProduto.UseVisualStyleBackColor = true;
@@ -48,44 +49,48 @@ namespace HandsOfWork
             // btnProdutos
             // 
             this.btnProdutos.Enabled = false;
-            this.btnProdutos.Location = new System.Drawing.Point(73, 112);
+            this.btnProdutos.Location = new System.Drawing.Point(97, 138);
+            this.btnProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Size = new System.Drawing.Size(190, 67);
+            this.btnProdutos.Size = new System.Drawing.Size(253, 82);
             this.btnProdutos.TabIndex = 1;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
             // 
             // btnClientes
             // 
-            this.btnClientes.Enabled = false;
-            this.btnClientes.Location = new System.Drawing.Point(73, 284);
+            this.btnClientes.Location = new System.Drawing.Point(97, 350);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(190, 67);
+            this.btnClientes.Size = new System.Drawing.Size(253, 82);
             this.btnClientes.TabIndex = 3;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 40);
+            this.label1.Location = new System.Drawing.Point(44, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 42);
+            this.label1.Size = new System.Drawing.Size(334, 54);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome do sistema";
             // 
-            // Form1
+            // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 390);
+            this.ClientSize = new System.Drawing.Size(459, 480);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnCategoriaDeProduto);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu principal";
             this.ResumeLayout(false);

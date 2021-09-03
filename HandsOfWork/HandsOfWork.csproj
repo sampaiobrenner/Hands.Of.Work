@@ -184,6 +184,12 @@
     <Compile Include="Forms\CategoriaDeProdutos\FormListagemDeCategoriaDeProduto.Designer.cs">
       <DependentUpon>FormListagemDeCategoriaDeProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Clientes\FormListagemDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormListagemDeClientes.Designer.cs">
+      <DependentUpon>FormListagemDeClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenu.resx">
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CategoriaDeProdutos\FormListagemDeCategoriaDeProduto.resx">
       <DependentUpon>FormListagemDeCategoriaDeProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FormListagemDeClientes.resx">
+      <DependentUpon>FormListagemDeClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
