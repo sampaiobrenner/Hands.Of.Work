@@ -38,10 +38,6 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             await ListarCategorias();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private async void FormListagemDeCategoriaDeProduto_Load(object sender, EventArgs e)
         {
@@ -51,6 +47,19 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         private async Task ListarCategorias()
         {
             dgvListagemCategoriaProduto.DataSource = await _categoriaDoProdutoService.ListarAsync();
+        }
+
+        private async void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvListagemCategoriaProduto.CurrentRow is null) return;
+            _formCadastroCategoriaDeProduto.Id = int.Parse(dgvListagemCategoriaProduto.CurrentRow.Cells["Id"].Value.ToString());
+            _formCadastroCategoriaDeProduto.ShowDialog();
+            await ListarCategorias();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

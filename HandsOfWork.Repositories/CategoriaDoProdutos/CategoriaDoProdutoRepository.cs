@@ -29,8 +29,8 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos
 
         public override async Task EditarAsync(CategoriaDoProduto entity)
         {
-            var model = _mapper.Map<CategoriaDoProduto, CategoriaDoProdutoModel>(entity);
-            _context.CategoriaDoProduto.Update(model);
+            var model = await _context.CategoriaDoProduto.FirstOrDefaultAsync(x => x.Id == entity.Id);
+            _context.CategoriaDoProduto.Update(_mapper.Map(entity, model));
             await _context.SaveChangesAsync();
         }
 

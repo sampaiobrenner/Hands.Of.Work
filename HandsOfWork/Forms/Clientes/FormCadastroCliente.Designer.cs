@@ -46,6 +46,7 @@ namespace HandsOfWork.Forms.Clientes
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(107, 37);
             this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -67,6 +68,7 @@ namespace HandsOfWork.Forms.Clientes
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(360, 22);
             this.txbNome.TabIndex = 1;
+            this.txbNome.TabStop = false;
             // 
             // panel2
             // 
@@ -86,6 +88,7 @@ namespace HandsOfWork.Forms.Clientes
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(107, 37);
             this.btnFechar.TabIndex = 1;
+            this.btnFechar.TabStop = false;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

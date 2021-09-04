@@ -37,7 +37,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemCategoriaProduto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -47,9 +47,10 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dgvListagemCategoriaProduto);
-            this.panel1.Location = new System.Drawing.Point(28, 22);
+            this.panel1.Location = new System.Drawing.Point(37, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 325);
+            this.panel1.Size = new System.Drawing.Size(987, 400);
             this.panel1.TabIndex = 0;
             // 
             // dgvListagemCategoriaProduto
@@ -62,28 +63,33 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.dgvListagemCategoriaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Descricao});
-            this.dgvListagemCategoriaProduto.Location = new System.Drawing.Point(18, 28);
+            this.dgvListagemCategoriaProduto.Location = new System.Drawing.Point(24, 34);
+            this.dgvListagemCategoriaProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvListagemCategoriaProduto.MultiSelect = false;
             this.dgvListagemCategoriaProduto.Name = "dgvListagemCategoriaProduto";
             this.dgvListagemCategoriaProduto.ReadOnly = true;
+            this.dgvListagemCategoriaProduto.RowHeadersWidth = 51;
             this.dgvListagemCategoriaProduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvListagemCategoriaProduto.ShowEditingIcon = false;
-            this.dgvListagemCategoriaProduto.Size = new System.Drawing.Size(704, 280);
+            this.dgvListagemCategoriaProduto.Size = new System.Drawing.Size(939, 345);
             this.dgvListagemCategoriaProduto.TabIndex = 0;
             // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 125;
             // 
             // Descricao
             // 
             this.Descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Descricao.DataPropertyName = "Descricao";
             this.Descricao.HeaderText = "Descricao";
+            this.Descricao.MinimumWidth = 6;
             this.Descricao.Name = "Descricao";
             this.Descricao.ReadOnly = true;
             this.Descricao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -94,17 +100,19 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             this.panel2.Controls.Add(this.btnExcluir);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnCadastrar);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(28, 374);
+            this.panel2.Controls.Add(this.btnFechar);
+            this.panel2.Location = new System.Drawing.Point(37, 460);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 54);
+            this.panel2.Size = new System.Drawing.Size(987, 66);
             this.panel2.TabIndex = 1;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(470, 12);
+            this.btnExcluir.Location = new System.Drawing.Point(627, 15);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 30);
+            this.btnExcluir.Size = new System.Drawing.Size(107, 37);
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -112,40 +120,45 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(556, 12);
+            this.btnEditar.Location = new System.Drawing.Point(741, 15);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(80, 30);
+            this.btnEditar.Size = new System.Drawing.Size(107, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(642, 12);
+            this.btnCadastrar.Location = new System.Drawing.Point(856, 15);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(80, 30);
+            this.btnCadastrar.Size = new System.Drawing.Size(107, 37);
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // button1
+            // btnFechar
             // 
-            this.button1.Location = new System.Drawing.Point(18, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Fechar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFechar.Location = new System.Drawing.Point(24, 15);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(107, 37);
+            this.btnFechar.TabIndex = 0;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FormListagemDeCategoriaDeProduto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormListagemDeCategoriaDeProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -166,7 +179,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
     }
