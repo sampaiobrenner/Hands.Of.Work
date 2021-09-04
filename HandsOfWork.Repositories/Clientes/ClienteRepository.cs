@@ -29,8 +29,8 @@ namespace HandsOfWork.Repositories.Clientes
 
         public override async Task EditarAsync(Cliente entity)
         {
-            var model = _mapper.Map<Cliente, ClienteModel>(entity);
-            _context.Cliente.Update(model);
+            var model = await _context.Cliente.FirstOrDefaultAsync(x => x.Id == entity.Id);
+            _context.Cliente.Update(_mapper.Map(entity, model));
             await _context.SaveChangesAsync();
         }
 

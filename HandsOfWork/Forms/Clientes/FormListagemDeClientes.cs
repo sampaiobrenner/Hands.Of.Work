@@ -52,5 +52,13 @@ namespace HandsOfWork.Forms.Clientes
 
             await ListarClientes();
         }
+
+        private async void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvListagemClientes.CurrentRow is null) return;
+            _formCadastroCliente.Id = int.Parse(dgvListagemClientes.CurrentRow.Cells["Id"].Value.ToString());
+            _formCadastroCliente.ShowDialog();
+            await ListarClientes();
+        }
     }
 }

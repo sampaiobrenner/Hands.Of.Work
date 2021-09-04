@@ -115,6 +115,7 @@ namespace HandsOfWork.Forms.Clientes
             this.Name = "FormCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cliente";
+            this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
