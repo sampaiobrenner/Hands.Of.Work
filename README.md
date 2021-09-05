@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/sampaiobrenner/hands.of.work/badge)](https://www.codefactor.io/repository/github/sampaiobrenner/hands.of.work)
+
 # Hands.Of.Work
 
 - Antes de iniciar o projeto é necessário executar o docker-compose disponibilizado na pasta 'tools' para realizar a criação do container com o SQL Server.
