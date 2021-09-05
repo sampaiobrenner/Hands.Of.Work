@@ -25,6 +25,7 @@ namespace HandsOfWork.Forms.Clientes
 
         private async void btnCadastrar_Click(object sender, EventArgs e)
         {
+            _formCadastroCliente.Id = null;
             _formCadastroCliente.ShowDialog();
             await ListarClientes();
         }

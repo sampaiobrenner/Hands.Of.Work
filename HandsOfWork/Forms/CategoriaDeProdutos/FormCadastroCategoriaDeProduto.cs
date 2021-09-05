@@ -50,7 +50,11 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
 
         private async void FormCadastroCategoriaDeProduto_Load(object sender, EventArgs e)
         {
-            if (Id is null) return;
+            if (Id is null)
+            {
+                txbDescricao.Text = null;
+                return;
+            }
             
             var categoria = await _categoriaDoProdutoService.ObterPorIdAsync(Id.Value);
             txbDescricao.Text = categoria.Descricao;

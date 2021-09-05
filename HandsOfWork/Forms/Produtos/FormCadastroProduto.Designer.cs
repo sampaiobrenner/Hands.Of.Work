@@ -30,7 +30,7 @@ namespace HandsOfWork.Forms.Produtos
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCategorias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProduto = new System.Windows.Forms.Label();
             this.txbDescricao = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@ namespace HandsOfWork.Forms.Produtos
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboCategorias);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblProduto);
             this.panel1.Controls.Add(this.txbDescricao);
@@ -54,14 +54,16 @@ namespace HandsOfWork.Forms.Produtos
             this.panel1.Size = new System.Drawing.Size(418, 161);
             this.panel1.TabIndex = 4;
             // 
-            // comboBox1
+            // cboCategorias
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 107);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(360, 24);
-            this.comboBox1.TabIndex = 4;
+            this.cboCategorias.DisplayMember = "Descricao";
+            this.cboCategorias.FormattingEnabled = true;
+            this.cboCategorias.Location = new System.Drawing.Point(23, 107);
+            this.cboCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCategorias.Name = "cboCategorias";
+            this.cboCategorias.Size = new System.Drawing.Size(360, 24);
+            this.cboCategorias.TabIndex = 2;
+            this.cboCategorias.ValueMember = "Id";
             // 
             // label1
             // 
@@ -79,9 +81,9 @@ namespace HandsOfWork.Forms.Produtos
             this.lblProduto.Location = new System.Drawing.Point(19, 25);
             this.lblProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(54, 16);
-            this.lblProduto.TabIndex = 2;
-            this.lblProduto.Text = "Produto";
+            this.lblProduto.Size = new System.Drawing.Size(44, 16);
+            this.lblProduto.TabIndex = 1;
+            this.lblProduto.Text = "Nome";
             // 
             // txbDescricao
             // 
@@ -90,7 +92,6 @@ namespace HandsOfWork.Forms.Produtos
             this.txbDescricao.Name = "txbDescricao";
             this.txbDescricao.Size = new System.Drawing.Size(360, 22);
             this.txbDescricao.TabIndex = 1;
-            this.txbDescricao.TabStop = false;
             // 
             // btnFechar
             // 
@@ -138,6 +139,7 @@ namespace HandsOfWork.Forms.Produtos
             this.Name = "FormCadastroProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produto";
+            this.Load += new System.EventHandler(this.FormCadastroProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -150,7 +152,7 @@ namespace HandsOfWork.Forms.Produtos
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblProduto;
         private System.Windows.Forms.TextBox txbDescricao;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCategorias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnSalvar;
