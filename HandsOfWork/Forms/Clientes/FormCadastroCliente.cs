@@ -51,7 +51,11 @@ namespace HandsOfWork.Forms.Clientes
 
         private async void FormCadastroCliente_Load(object sender, EventArgs e)
         {
-            if (Id is null) return;
+            if (Id is null)
+            {
+                txbNome.Text = null;
+                return;
+            }
 
             var cliente = await _clienteService.ObterPorIdAsync(Id.Value);
             txbNome.Text = cliente.Nome;

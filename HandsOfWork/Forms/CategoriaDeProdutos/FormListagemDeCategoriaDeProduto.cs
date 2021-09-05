@@ -20,6 +20,7 @@ namespace HandsOfWork.Forms.CategoriaDeProdutos
 
         private async void btnCadastrar_Click(object sender, EventArgs e)
         {
+            _formCadastroCategoriaDeProduto.Id = null;
             _formCadastroCategoriaDeProduto.ShowDialog();
             await ListarCategorias();
         }
