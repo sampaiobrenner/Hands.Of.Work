@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HandsOfWork.Forms.Produtos
@@ -17,14 +10,9 @@ namespace HandsOfWork.Forms.Produtos
             InitializeComponent();
         }
 
-        private void FormCadastroProduto_Load(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }

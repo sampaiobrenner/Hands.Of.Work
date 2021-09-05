@@ -48,61 +48,68 @@ namespace HandsOfWork.Forms.Produtos
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblProduto);
             this.panel1.Controls.Add(this.txbDescricao);
-            this.panel1.Location = new System.Drawing.Point(11, 12);
+            this.panel1.Location = new System.Drawing.Point(15, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 131);
+            this.panel1.Size = new System.Drawing.Size(418, 161);
             this.panel1.TabIndex = 4;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 87);
+            this.comboBox1.Location = new System.Drawing.Point(23, 107);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 21);
+            this.comboBox1.Size = new System.Drawing.Size(360, 24);
             this.comboBox1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 71);
+            this.label1.Location = new System.Drawing.Point(19, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Categoria";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblProduto
             // 
             this.lblProduto.AutoSize = true;
-            this.lblProduto.Location = new System.Drawing.Point(14, 20);
+            this.lblProduto.Location = new System.Drawing.Point(19, 25);
+            this.lblProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(44, 13);
+            this.lblProduto.Size = new System.Drawing.Size(54, 16);
             this.lblProduto.TabIndex = 2;
             this.lblProduto.Text = "Produto";
             // 
             // txbDescricao
             // 
-            this.txbDescricao.Location = new System.Drawing.Point(17, 38);
+            this.txbDescricao.Location = new System.Drawing.Point(23, 47);
+            this.txbDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDescricao.Name = "txbDescricao";
-            this.txbDescricao.Size = new System.Drawing.Size(271, 20);
+            this.txbDescricao.Size = new System.Drawing.Size(360, 22);
             this.txbDescricao.TabIndex = 1;
             this.txbDescricao.TabStop = false;
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(17, 9);
+            this.btnFechar.Location = new System.Drawing.Point(23, 11);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(80, 30);
+            this.btnFechar.Size = new System.Drawing.Size(107, 37);
             this.btnFechar.TabIndex = 1;
             this.btnFechar.TabStop = false;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(208, 9);
+            this.btnSalvar.Location = new System.Drawing.Point(277, 11);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(80, 30);
+            this.btnSalvar.Size = new System.Drawing.Size(107, 37);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
@@ -113,23 +120,24 @@ namespace HandsOfWork.Forms.Produtos
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnFechar);
             this.panel2.Controls.Add(this.btnSalvar);
-            this.panel2.Location = new System.Drawing.Point(11, 162);
+            this.panel2.Location = new System.Drawing.Point(15, 199);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 48);
+            this.panel2.Size = new System.Drawing.Size(418, 59);
             this.panel2.TabIndex = 5;
             // 
             // FormCadastroProduto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 231);
+            this.ClientSize = new System.Drawing.Size(449, 284);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormCadastroProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produto";
-            this.Load += new System.EventHandler(this.FormCadastroProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
