@@ -1,5 +1,6 @@
 ﻿using HandsOfWork.Forms.CategoriaDeProdutos;
 using HandsOfWork.Forms.Clientes;
+using HandsOfWork.Forms.Produtos;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HandsOfWork.Extensions
@@ -13,6 +14,8 @@ namespace HandsOfWork.Extensions
             services.AddScoped<FormCadastroCliente>();
             services.AddScoped<FormListagemDeCategoriaDeProduto>();
             services.AddScoped<FormCadastroCategoriaDeProduto>();
+            services.AddScoped<FormListagemDeProduto>();
+            services.AddScoped<FormCadastroProduto>();
             return services;
         }
     }
