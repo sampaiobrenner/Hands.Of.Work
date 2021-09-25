@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HandsOfWork.Entities;
+using HandsOfWork.Repositories.CategoriaDoProdutos.Models;
 using HandsOfWork.Repositories.Produtos.Models;
 
 namespace HandsOfWork.Repositories.Produtos.Converters
@@ -15,7 +16,7 @@ namespace HandsOfWork.Repositories.Produtos.Converters
 
             destination.Id = source.Id;
             destination.Descricao = source.Descricao;
-            destination.CategoriaDoProdutoId = source.CategoriaDoProdutoId;
+            destination.CategoriaDoProduto = context.Mapper.Map<CategoriaDoProdutoModel, CategoriaDoProduto>(source.CategoriaDoProduto);
 
             return destination;
         }

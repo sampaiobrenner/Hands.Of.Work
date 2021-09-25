@@ -40,8 +40,8 @@ namespace HandsOfWork.Forms.Produtos
                 return;
             }
 
-            var categoriaDoProdutoId = int.Parse(cboCategorias.SelectedValue.ToString());
-            var produto = new Produto { Descricao = txbDescricao.Text, CategoriaDoProdutoId = categoriaDoProdutoId };
+            var categoriaDoProduto = new CategoriaDoProduto { Id = int.Parse(cboCategorias.SelectedValue.ToString()) };
+            var produto = new Produto { Descricao = txbDescricao.Text, CategoriaDoProduto = categoriaDoProduto };
 
             if (Id != null)
             {
@@ -70,7 +70,7 @@ namespace HandsOfWork.Forms.Produtos
 
             var produto = await _produtoService.ObterPorIdAsync(Id.Value);
             txbDescricao.Text = produto.Descricao;
-            cboCategorias.SelectedValue = produto.CategoriaDoProdutoId;
+            cboCategorias.SelectedValue = produto.CategoriaDoProduto.Id;
         }
     }
 }
