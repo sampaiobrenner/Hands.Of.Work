@@ -38,7 +38,7 @@ namespace HandsOfWork.Forms.Produtos
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoriaDoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemDeProduto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -63,7 +63,7 @@ namespace HandsOfWork.Forms.Produtos
             this.dgvListagemDeProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Descricao,
-            this.Categoria});
+            this.CategoriaDoProduto});
             this.dgvListagemDeProduto.Location = new System.Drawing.Point(18, 28);
             this.dgvListagemDeProduto.MultiSelect = false;
             this.dgvListagemDeProduto.Name = "dgvListagemDeProduto";
@@ -73,6 +73,7 @@ namespace HandsOfWork.Forms.Produtos
             this.dgvListagemDeProduto.ShowEditingIcon = false;
             this.dgvListagemDeProduto.Size = new System.Drawing.Size(704, 280);
             this.dgvListagemDeProduto.TabIndex = 0;
+            this.dgvListagemDeProduto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListagemDeProduto_CellFormatting);
             // 
             // panel2
             // 
@@ -146,15 +147,14 @@ namespace HandsOfWork.Forms.Produtos
             this.Descricao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Descricao.Width = 326;
             // 
-            // Categoria
+            // CategoriaDoProduto
             // 
-            this.Categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Categoria.DataPropertyName = "CategoriaDoProduto.Descricao";
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CategoriaDoProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CategoriaDoProduto.DataPropertyName = "CategoriaDoProduto.Descricao";
+            this.CategoriaDoProduto.HeaderText = "Categoria";
+            this.CategoriaDoProduto.MinimumWidth = 6;
+            this.CategoriaDoProduto.Name = "CategoriaDoProduto";
+            this.CategoriaDoProduto.ReadOnly = true;
             // 
             // FormListagemDeProduto
             // 
@@ -186,6 +186,6 @@ namespace HandsOfWork.Forms.Produtos
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaDoProduto;
     }
 }

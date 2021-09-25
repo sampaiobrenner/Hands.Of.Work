@@ -10,6 +10,8 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos.Maps
         {
             builder.ToTable("categoria_produto");
 
+            builder.HasKey(x => x.Id);
+
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Descricao).IsRequired();
         }

@@ -43,16 +43,16 @@ namespace HandsOfWork.Repositories.Produtos
 
         public override async Task<IEnumerable<Produto>> ListarAsync()
         {
-            var models = await _context.Produto.ToListAsync();
-            var categorias = _mapper.Map<IEnumerable<ProdutoModel>, IEnumerable<Produto>>(models);
-            return categorias;
+            var models = await _context.Produto.Include(x => x.CategoriaDoProduto).ToListAsync();
+            var produtos = _mapper.Map<IEnumerable<ProdutoModel>, IEnumerable<Produto>>(models);
+            return produtos;
         }
 
         public override async Task<Produto> ObterPorIdAsync(int id)
         {
             var model = await _context.Produto.FirstOrDefaultAsync(x => x.Id == id);
-            var categoria = _mapper.Map<ProdutoModel, Produto>(model);
-            return categoria;
+            var produto = _mapper.Map<ProdutoModel, Produto>(model);
+            return produto;
         }
     }
 }
