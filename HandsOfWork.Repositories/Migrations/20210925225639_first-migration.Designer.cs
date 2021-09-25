@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HandsOfWork.Repositories.Migrations
 {
     [DbContext(typeof(HandsOfWorkContext))]
-    [Migration("20210903233559_add-cliente")]
-    partial class addcliente
+    [Migration("20210925225639_first-migration")]
+    partial class firstmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,35 @@ namespace HandsOfWork.Repositories.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cliente");
+                });
+
+            modelBuilder.Entity("HandsOfWork.Repositories.Produtos.Models.ProdutoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoriaDoProdutoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaDoProdutoId");
+
+                    b.ToTable("Produto");
+                });
+
+            modelBuilder.Entity("HandsOfWork.Repositories.Produtos.Models.ProdutoModel", b =>
+                {
+                    b.HasOne("HandsOfWork.Repositories.CategoriaDoProdutos.Models.CategoriaDoProdutoModel", "CategoriaDoProduto")
+                        .WithMany("Produtos")
+                        .HasForeignKey("CategoriaDoProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

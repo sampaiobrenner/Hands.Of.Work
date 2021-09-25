@@ -8,6 +8,8 @@ namespace HandsOfWork.Repositories.CategoriaDoProdutos.Maps
     {
         public void Configure(EntityTypeBuilder<CategoriaDoProdutoModel> builder)
         {
+            builder.ToTable("categoria_produto");
+
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Descricao).IsRequired();
         }

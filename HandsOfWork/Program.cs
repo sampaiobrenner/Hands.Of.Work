@@ -3,6 +3,7 @@ using HandsOfWork.Extensions;
 using HandsOfWork.Repositories.CategoriaDoProdutos.Profiles;
 using HandsOfWork.Repositories.Clientes.Profiles;
 using HandsOfWork.Repositories.Extensions;
+using HandsOfWork.Repositories.Produtos.Profiles;
 using HandsOfWork.Services.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -12,6 +13,17 @@ namespace HandsOfWork
 {
     public static class Program
     {
+        private static IServiceCollection AddAutoMapper(this IServiceCollection services)
+        {
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new ClienteProfile());
+                mc.AddProfile(new CategoriaDoProdutoProfile());
+                mc.AddProfile(new ProdutoProfile());
+            });
+            return services.AddSingleton(mapperConfig.CreateMapper());
+        }
+
         [STAThread]
         private static void Main()
         {
@@ -26,18 +38,8 @@ namespace HandsOfWork
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var form1 = serviceProvider.GetRequiredService<FormMenu>();
-            Application.Run(form1);
-        }
-
-        private static IServiceCollection AddAutoMapper(this IServiceCollection services)
-        {
-            var mapperConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new ClienteProfile());
-                mc.AddProfile(new CategoriaDoProdutoProfile());
-            });
-            return services.AddSingleton(mapperConfig.CreateMapper());
+            var formMenu = serviceProvider.GetRequiredService<FormMenu>();
+            Application.Run(formMenu);
         }
     }
 }

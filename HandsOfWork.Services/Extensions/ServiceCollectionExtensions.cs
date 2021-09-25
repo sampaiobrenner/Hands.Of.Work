@@ -10,6 +10,7 @@ namespace HandsOfWork.Services.Extensions
         {
             services.AddScoped<ICrudService<CategoriaDoProduto, int>, CategoriaDoProdutoService>();
             services.AddScoped<ICrudService<Cliente, int>, ClienteService>();
+            services.AddScoped<ICrudService<Produto, int>, ProdutoService>();
             return services;
         }
     }

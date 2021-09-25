@@ -8,6 +8,8 @@ namespace HandsOfWork.Repositories.Clientes.Maps
     {
         public void Configure(EntityTypeBuilder<ClienteModel> builder)
         {
+            builder.ToTable("cliente");
+
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Nome).IsRequired();
         }
